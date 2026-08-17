@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DriveEase | Car Rental Management System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html"><span class="brand-mark">D</span><span>Drive<span class="brand-accent">Ease</span></span></a>
+      <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      <div class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="cars.html">Cars</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="history.html">Bookings</a>
+        <a href="login.html" class="nav-login">Login</a>
+        <button id="themeToggle" class="icon-btn" title="Toggle dark mode">☾</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <span class="eyebrow">PREMIUM CAR RENTALS</span>
+        <h1>Drive something<br><em>extraordinary.</em></h1>
+        <p>Choose from a curated fleet of comfortable, reliable and luxury cars. Explore every detail before you book.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="cars.html">Explore Cars <span>→</span></a>
+          <a class="btn btn-ghost" href="#about">How it works</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>50+</strong><span>Vehicles</span></div>
+          <div><strong>24/7</strong><span>Support</span></div>
+          <div><strong>4.9/5</strong><span>Customer rating</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quick-search container">
+      <div>
+        <small>Find your perfect ride</small>
+        <h2>Where would you like to start?</h2>
+      </div>
+      <form id="homeSearch" class="search-row">
+        <label>Search model<input id="homeSearchInput" type="text" placeholder="e.g. BMW, Creta"></label>
+        <label>Category<select id="homeCategory"><option value="">All categories</option><option>Economy</option><option>Sedan</option><option>SUV</option><option>Luxury</option><option>Sports</option><option>Electric</option></select></label>
+        <button class="btn btn-primary" type="submit">Search Cars</button>
+      </form>
+    </section>
+
+    <section class="section container" id="featured">
+      <div class="section-heading">
+        <div><span class="eyebrow">OUR FLEET</span><h2>Featured cars</h2></div>
+        <a href="cars.html">View all →</a>
+      </div>
+      <div id="featuredCars" class="car-grid"></div>
+    </section>
+
+    <section class="showcase-strip">
+      <div class="container showcase-promo">
+        <div>
+          <span class="eyebrow">NEW EXPERIENCE</span>
+          <h2>Don't just rent a car.<br><em>Explore it.</em></h2>
+          <p>Open doors, lower windows, step inside the cabin and discover luxury features before making your decision.</p>
+          <a class="btn btn-primary" href="cars.html">Enter Interactive Showroom →</a>
+        </div>
+        <div class="promo-circles">
+          <span>🚪</span><span>🪟</span><span>🪑</span><span>✨</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" id="about">
+      <div class="section-heading"><div><span class="eyebrow">WHY DRIVE EASE</span><h2>Everything you need in one place</h2></div></div>
+      <div class="feature-grid">
+        <article class="info-card"><div class="feature-icon">🔎</div><h3>Smart discovery</h3><p>Search and filter cars by model, category, fuel type and daily budget.</p></article>
+        <article class="info-card"><div class="feature-icon">🚘</div><h3>Explore before booking</h3><p>Use the interactive showroom to inspect the exterior, interior and special features.</p></article>
+        <article class="info-card"><div class="feature-icon">🔐</div><h3>Simple booking</h3><p>Complete a validated booking form and save your reservation locally in the browser.</p></article>
+        <article class="info-card"><div class="feature-icon">📱</div><h3>Built for every screen</h3><p>A responsive interface that works comfortably on mobile, tablet and desktop.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="footer">
+    <div class="container footer-grid">
+      <div><a class="brand" href="index.html"><span class="brand-mark">D</span><span>Drive<span class="brand-accent">Ease</span></span></a><p>Modern car rentals with a showroom experience.</p></div>
+      <div><h4>Explore</h4><a href="cars.html">Cars</a><a href="history.html">Booking history</a><a href="login.html">Login</a></div>
+      <div><h4>Contact</h4><a href="mailto:hello@driveease.demo">hello@driveease.demo</a><a href="tel:+919999999999">+91 99999 99999</a><span>Mon–Sun · 24/7</span></div>
+      <div><h4>Follow</h4><div class="socials"><a href="#">Instagram</a><a href="#">Facebook</a><a href="#">LinkedIn</a></div></div>
+    </div>
+    <div class="container footer-bottom">© 2026 DriveEase · Academic project demonstration</div>
+  </footer>
+  <script src="js/cars.js"></script><script src="js/app.js"></script>
+</body>
+</html>
