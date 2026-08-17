@@ -1,0 +1,5 @@
+document.addEventListener("DOMContentLoaded",()=>{
+ const wrap=document.getElementById("bookingHistory");
+ function render(){const list=JSON.parse(localStorage.getItem("driveease-bookings")||"[]");if(!list.length){wrap.innerHTML='<div class="empty-state"><h3>No bookings yet</h3><p>Explore the fleet and reserve your first car.</p><a class="btn btn-primary" href="cars.html">Browse cars</a></div>';return}wrap.innerHTML=list.map(b=>`<article class="history-card"><div><span class="eyebrow">${b.id}</span><h3>${b.carName}</h3><p>👤 ${b.name} · 📞 ${b.phone}</p><p>📅 ${b.pickup} → ${b.return} · ${b.days} day${b.days!==1?"s":""}</p><p>📍 ${b.location}</p></div><div><strong>₹${b.total.toLocaleString()}</strong><p>Confirmed</p></div></article>`).join("")}
+ render();document.getElementById("clearBookings").addEventListener("click",()=>{if(confirm("Clear all saved bookings?")){localStorage.removeItem("driveease-bookings");render()}})
+});
