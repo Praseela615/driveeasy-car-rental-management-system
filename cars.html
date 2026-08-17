@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cars | DriveEase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<header class="site-header"><nav class="nav container"><a class="brand" href="index.html"><span class="brand-mark">D</span><span>Drive<span class="brand-accent">Ease</span></span></a><button class="menu-toggle">☰</button><div class="nav-links"><a href="index.html">Home</a><a class="active" href="cars.html">Cars</a><a href="index.html#about">About</a><a href="history.html">Bookings</a><a href="login.html" class="nav-login">Login</a><button id="themeToggle" class="icon-btn">☾</button></div></nav></header>
+<main class="page-main">
+  <section class="page-hero"><div class="container"><span class="eyebrow">OUR FLEET</span><h1>Find your next ride.</h1><p>Compare cars, explore their interiors and discover features before you book.</p></div></section>
+  <section class="container catalogue">
+    <div class="filters-panel">
+      <div class="search-control"><span>⌕</span><input id="carSearch" type="search" placeholder="Search by car name or model..."></div>
+      <select id="categoryFilter"><option value="">All categories</option><option>Economy</option><option>Sedan</option><option>SUV</option><option>Luxury</option><option>Sports</option><option>Electric</option></select>
+      <select id="fuelFilter"><option value="">All fuel types</option><option>Petrol</option><option>Diesel</option><option>Hybrid</option><option>Electric</option></select>
+      <select id="sortCars"><option value="featured">Sort: Featured</option><option value="low">Price: Low to high</option><option value="high">Price: High to low</option><option value="name">Name: A–Z</option></select>
+    </div>
+    <div class="results-line"><span id="resultCount"></span><button id="clearFilters" class="text-btn">Clear filters</button></div>
+    <div id="carGrid" class="car-grid"></div>
+  </section>
+</main>
+<div id="showroomModal" class="modal hidden"></div>
+<footer class="footer compact"><div class="container footer-bottom">© 2026 DriveEase · Academic project demonstration</div></footer>
+<script src="js/cars.js"></script><script src="js/showroom.js"></script><script src="js/app.js"></script>
+</body>
+</html>
